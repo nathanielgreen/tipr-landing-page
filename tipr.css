@@ -1,0 +1,100 @@
+/* CSS declarations go here */
+body {
+  background: #ddd;
+  color: #4C4D57;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Home Template CSS Start */
+.home-wrapper {
+  margin-top: 50%
+}
+
+#home-title {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+  #home-title h1 {
+    font-size: 60px;
+    margin: 0
+  }
+  #home-title h3 {
+    font-family: 'Raleway';
+    text-decoration: underline;
+  }
+  
+#home-buttons {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%; 
+}
+
+  .home-button {
+    background: #4C4D57;
+    border: solid;
+    border-color: #4C4D57;
+    border-width: 5px;
+    color: #ddd;
+    display: inline-block;
+    font-size: 36px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    text-align: center;
+  }
+    .home-button:hover {
+      background: #ddd;
+      color: #4C4D57;
+    }
+/* Home Template CSS End */
+
+
+/* Map Template CSS Start */
+.map-wrapper {
+}
+
+#map-navbar {
+  background: #4C4D57;
+  color: #ddd;
+  display: inline-block;
+  height: 10%;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+  #goback {
+    background-color: #4C4D57;
+    border: solid;
+    border-color: #4C4D57;
+    border-radius: 20px;
+    border-width: 2px;
+    float: left;
+    padding: 10px;
+  }
+    #goback:hover {
+      background: #ddd;
+      color: #4C4D57;
+    }
+
+
+#map-container {
+  height: 800px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+/* Map Template CSS End */
+
+
