@@ -1,5 +1,5 @@
 
-angular.module('tipr', ['ionic', 'tipr.controllers'])
+angular.module('tipr', ['ionic', 'tipr.controllers', 'tipr.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -27,22 +27,22 @@ angular.module('tipr', ['ionic', 'tipr.controllers'])
     templateUrl: 'templates/tabs.html'
   })
 
-  .state('tab.profile', {
-    url: '/profile',
+  .state('tab.history', {
+    url: '/history',
     views: {
       'tab-profile': {
-        templateUrl: 'templates/tab-profile.html',
-        controller: 'ProfileCtrl'
+        templateUrl: 'templates/tab-history.html',
+        controller: 'HistoryController as historyCtrl'
       }
     }
   })
 
-  .state('tab.pay', {
-      url: '/pay',
+  .state('tab.dash', {
+      url: '/dash',
       views: {
-        'tab-pay': {
-          templateUrl: 'templates/tab-pay.html',
-          controller: 'PayCtrl'
+        'tab-dash': {
+          templateUrl: 'templates/tab-dash.html',
+          controller: 'DashController as dashCtrl'
         }
       }
     })
@@ -52,11 +52,11 @@ angular.module('tipr', ['ionic', 'tipr.controllers'])
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        controller: 'AccountController as accountCtrl'
       }
     }
   });
 
-  $urlRouterProvider.otherwise('/tab/profile');
+  $urlRouterProvider.otherwise('/tab/dash');
 
 });
