@@ -1,4 +1,4 @@
-<ion-view view-title="Sign in">
+<ion-view view-title="Sign up">
   <ion-content>
 
     <div class="list">
@@ -10,19 +10,17 @@
         <span class="input-label">Password</span>
         <input type="password" ng-model="user.password">
       </label>
+      <label class="item item-input">
+        <span class="input-label">Password Confirmation</span>
+        <input type="password" ng-model="passwordConf">
+      </label>
     </div>
 
     <div class="padding">
-      <button class="button button-block button-tipr" ng-click="signInCtrl.signIn(user)">
-        Sign in
+      <button ng-disabled="signUpCtrl.invalid(user.password, passwordConf)"
+        class="button button-block button-tipr" ng-click="signUpCtrl.signUp(user)">
+        Sign up
       </button>
-      <br>
-      <p class="text-center">
-        <a href="#/sign-up" class='tipr-color'>Sign Up</a>
-        <br>
-        <br>
-        <a href="#/forgot-password" class='tipr-color'>Forgot password</a>
-      </p>
     </div>
 
   </ion-content>

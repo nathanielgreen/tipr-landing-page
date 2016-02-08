@@ -63,6 +63,12 @@ angular.module('tipr', ['ionic', 'firebase', 'tipr.controllers', 'tipr.services'
      controller: 'SignInController as signInCtrl'
    })
 
+   .state('signup', {
+      url: '/sign-up',
+      templateUrl: 'templates/sign-up.html',
+      controller: 'SignUpController as signUpCtrl'
+    })
+
   $urlRouterProvider.otherwise('/sign-in');
 
 });
