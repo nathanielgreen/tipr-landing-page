@@ -3,13 +3,13 @@
   "balance" : 120.00,
   "history" : [
       {"recipient" : "Aaron Kendall",
-      "ammount": 12.00,
+      "amount": 12.00,
       "date": "01/01/2016"},
       {"recipient" : "Nathaniel Green",
       "amount": 10.00,
       "date": "13/01/2016"},
       {"recipient" : "Harry Dix",
-      "ammount": 9.00,
+      "amount": 9.00,
       "date": "21/01/2016"}
   ]
 }
