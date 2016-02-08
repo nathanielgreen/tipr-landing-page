@@ -1,3 +1,9 @@
+.scroll {
+  height: 100%;
+  margin: 0;
+  background-color: #384C67;
+}
+
 .profile{
   text-align: center;
 }
@@ -6,10 +12,23 @@
   padding: 2%;
   background-image: url("../img/london3.jpg");
   background-size: 100%;
-  height: 50%;
 }
 
 .user > h3 {
+  color: white;
+}
+
+.balance > h4 {
+  color: white;
+  padding: 1%;
+  margin: 0;
+  background-color: #384C67;
+  border-top: medium;
+  border-style: solid;
+  border-color: #1AAAAB;
+}
+
+.transactions > h4 {
   color: white;
 }
 
@@ -18,4 +37,33 @@
   border-style: solid;
   border-color: white;
   border-radius: 50%;
+}
+
+.transactions {
+  border-color: grey;
+  border-style: solid;
+  border-top: medium;
+  border-bottom: medium;
+  border-style: solid;
+  border-color: #1AAAAB;
+  background-color: #384C67;
+}
+
+.row {
+  color: white;
+  border-top: medium;
+  border-style: solid;
+  border-color: #1AAAAB;
+}
+
+.float-left {
+  width: 50%;
+  float: left;
+  display: inline-block;
+}
+
+.float-right {
+  width: 50%;
+  float:right;
+  display: inline-block;
 }
