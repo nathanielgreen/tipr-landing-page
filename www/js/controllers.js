@@ -10,12 +10,14 @@ angular.module('tipr.controllers', [])
 
   var userData = {};
 
-  self.getUserData = function () {
+  getUserData = function () {
     UserDataService.getData()
     .then(function(response){
       self.userData = response.data;
     });
   };
+
+  getUserData();
 })
 
 .controller('AccountController', function($scope) {

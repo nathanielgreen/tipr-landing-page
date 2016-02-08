@@ -14,11 +14,11 @@
   background-size: 100%;
 }
 
-.user > h3 {
+.user > h1 {
   color: white;
 }
 
-.balance > h4 {
+.balance > h2 {
   color: white;
   padding: 1%;
   margin: 0;
@@ -28,8 +28,10 @@
   border-color: #1AAAAB;
 }
 
-.transactions > h4 {
+.transactions > h3 {
   color: white;
+  padding: 1%;
+  margin: 0;
 }
 
 .user > img {
@@ -50,10 +52,17 @@
 }
 
 .row {
-  color: white;
   border-top: medium;
   border-style: solid;
   border-color: #1AAAAB;
+}
+
+.col > h3 {
+  color: white;
+}
+
+.col > h4 {
+  color: white;
 }
 
 .float-left {

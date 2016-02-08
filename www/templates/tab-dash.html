@@ -2,46 +2,34 @@
   <ion-content class="profile">
     <div class="user">
       <img src="/img/chris.jpg"/>
-      <h3>Chris Harry Weeks</h3>
-      <button id='button' class="button button-block button-positive" ng-click="dashCtrl.getUserData()">
+      <h1>{{dashCtrl.userData.name}}</h1>
     </div>
     <div "user-data">
       <div class="balance">
-        <h4>Balance: £123.45</h4>
+        <h2>Balance: £{{dashCtrl.userData.balance}}</h2>
       </div>
       <div class="transactions">
-        <h4>Latest Transactions</h4>
+        <h3>Latest Transactions</h3>
         <div class="row">
           <div class="col">
-            Aaron Kendall
+            <h3>Recipient</h3>
           </div>
           <div class="col">
-            £11.00
+            <h3>Ammount</h3>
           </div>
           <div class="col">
-            01/01/2016
+            <h3>Date</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row" ng-repeat="transaction in dashCtrl.userData.history">
           <div class="col">
-            Nathaniel Green
+            <h4>{{transaction.recipient}}</h4>
           </div>
           <div class="col">
-            £18.00
+            <h4>£{{transaction.ammount.toFixed(2)}}</h4>
           </div>
           <div class="col">
-            09/01/2016
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            Harry Dix
-          </div>
-          <div class="col">
-            £12.00
-          </div>
-          <div class="col">
-            21/01/2016
+            <h4>{{transaction.date}}</h4>
           </div>
         </div>
       </div>
