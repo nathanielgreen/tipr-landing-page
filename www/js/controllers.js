@@ -24,4 +24,19 @@ angular.module('tipr.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+
+
+.controller('SignInController', SignInController);
+
+function SignInController(AuthService, $state) {
+
+  this.signIn = function (user) {
+    AuthService.logIn(user).then(function () {
+      $state.go('tab.dash');
+    }).catch(function (error) {
+      alert(error);
+    });
+  };
+
+}

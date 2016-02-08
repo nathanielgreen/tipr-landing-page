@@ -1,5 +1,6 @@
 <ion-view view-title="tipr">
   <ion-content class="profile">
+
     <div class="user">
       <img src="/img/chris.jpg"/>
       <h1>{{dashCtrl.userData.name}}</h1>
@@ -15,7 +16,7 @@
             <h3>Recipient</h3>
           </div>
           <div class="col">
-            <h3>Ammount</h3>
+            <h3>Amount</h3>
           </div>
           <div class="col">
             <h3>Date</h3>
@@ -26,7 +27,7 @@
             <h4>{{transaction.recipient}}</h4>
           </div>
           <div class="col">
-            <h4>£{{transaction.ammount.toFixed(2)}}</h4>
+            <h4>£{{transaction.amount.toFixed(2)}}</h4>
           </div>
           <div class="col">
             <h4>{{transaction.date}}</h4>
@@ -34,5 +35,6 @@
         </div>
       </div>
     </div>
+    
   </ion-content>
 </ion-view>

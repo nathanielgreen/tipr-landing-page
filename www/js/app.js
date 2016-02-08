@@ -1,5 +1,5 @@
 
-angular.module('tipr', ['ionic', 'tipr.controllers', 'tipr.services'])
+angular.module('tipr', ['ionic', 'firebase', 'tipr.controllers', 'tipr.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -55,8 +55,14 @@ angular.module('tipr', ['ionic', 'tipr.controllers', 'tipr.services'])
         controller: 'AccountController as accountCtrl'
       }
     }
-  });
+  })
 
-  $urlRouterProvider.otherwise('/tab/dash');
+  .state('signin', {
+     url: '/sign-in',
+     templateUrl: 'templates/sign-in.html',
+     controller: 'SignInController as signInCtrl'
+   })
+
+  $urlRouterProvider.otherwise('/sign-in');
 
 });
