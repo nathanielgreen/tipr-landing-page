@@ -1,1 +1,21 @@
-/* Empty. Add your own CSS if you like */
+.profile{
+  text-align: center;
+}
+
+.user {
+  padding: 2%;
+  background-image: url("../img/london3.jpg");
+  background-size: 100%;
+  height: 50%;
+}
+
+.user > h3 {
+  color: white;
+}
+
+.user > img {
+  border-width: thick;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+}
