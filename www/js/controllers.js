@@ -4,19 +4,17 @@ angular.module('tipr.controllers', [])
 
 })
 
-.controller('DashController', function(UserDataService) {
+.controller('DashController', function($firebaseAuth, $firebaseObject) {
 
   var self = this;
 
-  var userData = {};
+  var ref = new Firebase('https://tipr.firebaseio.com/');
+  var usersRef = ref.child('users');
 
-  getUserData = function () {
-    UserDataService.getData()
-    .then(function(response){
-      self.userData = response.data;
-    });
-  };
-  getUserData();
+  $firebaseAuth(ref).$onAuth(function(auth) {
+    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
+  });
+
 })
 
 .controller('AccountController', function($scope) {

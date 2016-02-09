@@ -2,12 +2,12 @@
   <ion-content class="profile">
 
     <div class="user">
-      <img src="/img/chris.jpg"/>
-      <h1>{{dashCtrl.userData.name}}</h1>
+      <img ng-src="/img/{{dashCtrl.user.name}}.jpg"/>
+      <h1>{{dashCtrl.user.name}}</h1>
     </div>
     <div "user-data">
       <div class="balance">
-        <h2>Balance: £{{dashCtrl.userData.balance}}</h2>
+        <h2>Balance: £{{dashCtrl.user.balance}}</h2>
       </div>
       <div class="transactions">
         <h3>Latest Transactions</h3>
@@ -22,7 +22,7 @@
             <h3>Date</h3>
           </div>
         </div>
-        <div class="row" ng-repeat="transaction in dashCtrl.userData.history">
+        <div class="row" ng-repeat="transaction in dashCtrl.user.history">
           <div class="col">
             <h4>{{transaction.recipient}}</h4>
           </div>
