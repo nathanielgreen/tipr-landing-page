@@ -32,8 +32,10 @@ function AuthService($firebaseAuth) {
 
   self.signUp = function (user) {
     return auth.$createUser(user).then(function (userData) {
-      ref.child('users').child(userData.uid).set({ email: user.email });
+      ref.child('users').child(userData.uid).set({ email: user.email,
+                                                   name: user.name,
+                                                   balance: 0,
+                                                 });
     });
   };
-
 }
