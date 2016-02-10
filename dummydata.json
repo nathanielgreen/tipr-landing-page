@@ -1,0 +1,24 @@
+{
+  "tipees":
+    [
+      {
+        "name":"Nat", 
+        "occupation":"Pizza Express",
+        "coords": [51.4, -0.09],
+        "photo":"http://imgur.com/mCvaM2y.jpg"
+
+      },
+      {
+        "name":"Aaron", 
+        "occupation":"Nandos",
+        "coords": [51.3, -0.09],
+        "photo":"http://imgur.com/NHDonCA.jpg"
+      },
+      {
+        "name":"Chris",
+        "occupation":"McD's",
+        "coords": [51.2, -0.09],
+        "photo":"http://imgur.com/VFjokYS.jpg"
+      }
+    ]
+}
