@@ -1,7 +1,31 @@
 <ion-view view-title="tipr">
   <ion-content>
 
-    <h2>Transaction History</h2>
-    
+    <div class="transactions">
+      <h3>Transaction History</h3>
+      <div class="row">
+        <div class="col">
+          <h3>User</h3>
+        </div>
+        <div class="col">
+          <h3>Amount</h3>
+        </div>
+        <div class="col">
+          <h3>Date</h3>
+        </div>
+      </div>
+      <div class="row" ng-repeat="transaction in historyCtrl.user.history">
+        <div class="col">
+          <h4>{{transaction.user}}</h4>
+        </div>
+        <div class="col">
+          <h4>£{{transaction.amount.toFixed(2)}}</h4>
+        </div>
+        <div class="col">
+          <h4>{{transaction.date}}</h4>
+        </div>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>

@@ -1,7 +1,14 @@
 angular.module('tipr.controllers', [])
 
-.controller('HistoryController', function($scope) {
+.controller('HistoryController', function($firebaseAuth, $firebaseObject) {
+  var self = this;
 
+  var ref = new Firebase('https://tipr.firebaseio.com/');
+  var usersRef = ref.child('users');
+
+  $firebaseAuth(ref).$onAuth(function(auth) {
+    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
+  });
 })
 
 .controller('DashController', function($firebaseAuth, $firebaseObject) {
