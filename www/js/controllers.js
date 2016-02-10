@@ -17,7 +17,7 @@ angular.module('tipr.controllers', [])
 
 })
 
-.controller('AccountController', function($firebaseAuth, $firebaseObject) {
+.controller('AccountController', function($firebaseAuth, $firebaseObject, $state) {
 
   var self = this;
 
@@ -31,6 +31,7 @@ angular.module('tipr.controllers', [])
   this.updateBalance = function(amount) {
     var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
     userRef.child('balance').set(self.user.balance + amount);
+    $state.go('tab.dash')
   };
 })
 
@@ -53,9 +54,36 @@ angular.module('tipr.controllers', [])
     }).catch(function (error) {
       alert(error);
     });
-  };
+    }
 
   this.invalid = function(password, passwordConfirmation) {
     return password != passwordConfirmation
+  };
+})
+
+.controller('TipController', function($firebaseAuth, $firebaseObject, $state) {
+
+  var self = this;
+
+  var ref = new Firebase('https://tipr.firebaseio.com/');
+  var usersRef = ref.child('users');
+  self.usersHash = $firebaseObject(ref.child('users'));
+
+  $firebaseAuth(ref).$onAuth(function(auth) {
+    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
+  });
+
+  self.selectRecipient = function(uid) {
+    self.recipientId = uid;
   }
-});
+
+  self.sendTip = function(amount) {
+    var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
+    userRef.child('balance').set(self.user.balance - amount);
+
+    var recipient = self.usersHash[self.recipientId];
+    var recipientRef = new Firebase("https://tipr.firebaseio.com/users/"+self.recipientId);
+    recipientRef.child('balance').set(recipient.balance + amount)
+    $state.go('tab.dash')
+  }
+})

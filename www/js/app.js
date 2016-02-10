@@ -69,6 +69,12 @@ angular.module('tipr', ['ionic', 'firebase', 'tipr.controllers', 'tipr.services'
       controller: 'SignUpController as signUpCtrl'
     })
 
+    .state('tip', {
+       url: '/tip',
+       templateUrl: 'templates/tip.html',
+       controller: 'TipController as tipCtrl'
+     })
+
   $urlRouterProvider.otherwise('/sign-in');
 
 });
