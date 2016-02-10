@@ -1,11 +1,13 @@
 <ion-view view-title="tipr">
   <ion-content>
 
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-    
+    <label class="item item-input">
+      <span class="input-label">Ammount</span>
+      <input ng-model="accountCtrl.amount" type="number">
+    </label>
+    <button class="button button-block button-tipr" ng-click="accountCtrl.updateBalance(accountCtrl.amount)">
+      Add to balance
+    </button>
+
   </ion-content>
 </ion-view>

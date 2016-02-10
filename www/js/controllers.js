@@ -17,9 +17,20 @@ angular.module('tipr.controllers', [])
 
 })
 
-.controller('AccountController', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+.controller('AccountController', function($firebaseAuth, $firebaseObject) {
+
+  var self = this;
+
+  var ref = new Firebase('https://tipr.firebaseio.com/');
+  var usersRef = ref.child('users');
+
+  $firebaseAuth(ref).$onAuth(function(auth) {
+    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
+  });
+
+  this.updateBalance = function(amount) {
+    var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
+    userRef.child('balance').set(self.user.balance + amount);
   };
 })
 

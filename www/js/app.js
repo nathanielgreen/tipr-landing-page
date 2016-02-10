@@ -30,7 +30,7 @@ angular.module('tipr', ['ionic', 'firebase', 'tipr.controllers', 'tipr.services'
   .state('tab.history', {
     url: '/history',
     views: {
-      'tab-profile': {
+      'tab-history': {
         templateUrl: 'templates/tab-history.html',
         controller: 'HistoryController as historyCtrl'
       }
