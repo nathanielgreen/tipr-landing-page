@@ -13,7 +13,7 @@
         <h3>Latest Transactions</h3>
         <div class="row">
           <div class="col">
-            <h3>Recipient</h3>
+            <h3>User</h3>
           </div>
           <div class="col">
             <h3>Amount</h3>
@@ -24,7 +24,7 @@
         </div>
         <div class="row" ng-repeat="transaction in dashCtrl.user.history">
           <div class="col">
-            <h4>{{transaction.recipient}}</h4>
+            <h4>{{transaction.user}}</h4>
           </div>
           <div class="col">
             <h4>£{{transaction.amount.toFixed(2)}}</h4>

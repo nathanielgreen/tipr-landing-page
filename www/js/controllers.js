@@ -77,13 +77,32 @@ angular.module('tipr.controllers', [])
     self.recipientId = uid;
   }
 
+  self.todaysDate = function() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {dd='0'+dd}
+    if(mm<10) {mm='0'+mm}
+
+    today = mm+'/'+dd+'/'+yyyy;
+    return today
+  }
+
   self.sendTip = function(amount) {
     var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
     userRef.child('balance').set(self.user.balance - amount);
 
     var recipient = self.usersHash[self.recipientId];
     var recipientRef = new Firebase("https://tipr.firebaseio.com/users/"+self.recipientId);
-    recipientRef.child('balance').set(recipient.balance + amount)
+    recipientRef.child('balance').set(recipient.balance + amount);
+
+    var date = new Date();
+    var userTransaction = {"user": recipient.name, "amount": (amount * -1), 'date': self.todaysDate()}
+    var recipientTransaction = {"user": self.user.name, "amount": amount, 'date': self.todaysDate()}
+    userRef.child('history').push(userTransaction);
+    recipientRef.child('history').push(recipientTransaction);
     $state.go('tab.dash')
   }
 })
