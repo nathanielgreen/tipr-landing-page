@@ -68,13 +68,13 @@ angular.module('tipr.controllers', [])
   };
 })
 
-.controller('TipController', function($firebaseAuth, $firebaseObject, $state) {
+.controller('TipController', function($firebaseAuth, $firebaseObject, $firebaseArray, $state) {
 
   var self = this;
 
   var ref = new Firebase('https://tipr.firebaseio.com/');
   var usersRef = ref.child('users');
-  self.usersHash = $firebaseObject(ref.child('users'));
+  self.usersArray = $firebaseArray(ref.child('users'));
 
   $firebaseAuth(ref).$onAuth(function(auth) {
     self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
