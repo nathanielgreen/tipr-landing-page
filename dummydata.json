@@ -4,20 +4,37 @@
       {
         "name":"Nat", 
         "occupation":"Pizza Express",
-        "coords": [51.4, -0.09],
+        "coords": [51.564643, -0.105872],
         "photo":"http://imgur.com/mCvaM2y.jpg"
-
+      },
+      {
+        "name":"Nat's Stalker", 
+        "occupation":"Express Pizza",
+        "coords": [51.565743, -0.106972],
+        "photo":"http://imgur.com/mCvaM2y.jpg"
       },
       {
         "name":"Aaron", 
         "occupation":"Nandos",
-        "coords": [51.3, -0.09],
+        "coords": [51.87629, 0.156754],
+        "photo":"http://imgur.com/NHDonCA.jpg"
+      },
+      {
+        "name":"Aaron's Mum", 
+        "occupation":"Dosnan",
+        "coords": [51.87729, 0.156854],
         "photo":"http://imgur.com/NHDonCA.jpg"
       },
       {
         "name":"Chris",
         "occupation":"McD's",
-        "coords": [51.2, -0.09],
+        "coords": [51.444978, -0.137747],
+        "photo":"http://imgur.com/VFjokYS.jpg"
+      },
+      {
+        "name":"Chris' Stalker",
+        "occupation":"DMc's",
+        "coords": [51.446078, -0.138847],
         "photo":"http://imgur.com/VFjokYS.jpg"
       }
     ]

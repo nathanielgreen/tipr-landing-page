@@ -1,7 +1,12 @@
+html{
+  height: 100%;
+}
+
 body {
   font-family: Arial;
   margin: 0 auto;
   text-align: center;
+  height: 100%;
 }
 
 a {
@@ -11,11 +16,17 @@ a {
 
 
 #map {
-  height: 900px;
+  height: 90%;
   width: 100%;
 }
 
+#buttons {
+  height: 10%;
+}
 
+.wrapper {
+  height: 100%;
+}
 /* Marker CSS */
 .markerPopup {
   font-family: Arial;
