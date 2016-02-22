@@ -12,7 +12,7 @@
     </div>
 
     <div class="transactions">
-      <div class="row" ng-repeat="transaction in dashCtrl.user.history" ng-style=" $odd ? { 'background-color':'#E7E4E4'} : { 'background-color': 'white' }">
+      <div class="row" ng-repeat="transaction in dashCtrl.user.history" ng-style="$odd ?{'background-color':'#E7E4E4'}:{'background-color': 'white'}">
         <div class="col">
           <img class = 'arrow' src='/img/blue-arrow.png' ng-show="transaction.amount > 0" />
           <img class = 'arrow' src='/img/red-arrow.png' ng-show="transaction.amount < 0" />
@@ -23,13 +23,13 @@
         </div>
         <div class="col">
           <div>
-            <h4 class='amount' ng-style=" transaction.amount > 0 ? { 'color':'#4083F3'} : { 'color': '#FE4C5B' }">
+            <h4 class='amount' ng-style="transaction.amount > 0 ? {'color':'#4083F3'}:{'color': '#FE4C5B'}">
               £{{transaction.amount.toFixed(2)}}
             </h4>
           </div>
         </div>
       </div>
-        <p class='history-link'>View all account activity</p>
+        <p href="#/tab/history" class='history-link'>View all account activity</p>
     </div>
     <a href="#/tip">
       <button class="button icon-right button-tipr">
