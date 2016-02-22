@@ -1,12 +1,9 @@
 <ion-view view-title="tipr">
   <ion-content>
     <label class="item item-input">
-      <input type='text' placeholder="Search" ng-model="search.email">
-    </label>
-    <label class="item item-input">
      <span class="input-label"><strong>Select Recipient:</strong></span>
    </label>
-   <div ng-repeat="(uid, user) in tipCtrl.usersArray | filter:search">
+   <div ng-repeat="(uid, user) in tipCtrl.usersHash">
      <ion-radio ng-click="tipCtrl.selectRecipient(uid)">
        {{ user.email }}
      </ion-radio>

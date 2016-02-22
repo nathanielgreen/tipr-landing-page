@@ -1,45 +1,40 @@
 <ion-view view-title="tipr">
   <ion-content class="profile">
-
     <div class="user">
       <img ng-src="/img/{{dashCtrl.user.name}}.jpg"/>
-      <h1>{{dashCtrl.user.name}}</h1>
-      <a href="#/tip">
-        <button class="button icon-right button-tipr">
-          Send A Tip
-        </button>
-      </a>
-    </div>
-    <div "user-data">
-      <div class="balance">
-        <h2>Balance: £{{dashCtrl.user.balance}}</h2>
-      </div>
-      <div class="transactions">
-        <h3>Latest Transactions</h3>
-        <div class="row">
-          <div class="col">
-            <h3>User</h3>
-          </div>
-          <div class="col">
-            <h3>Amount</h3>
-          </div>
-          <div class="col">
-            <h3>Date</h3>
-          </div>
-        </div>
-        <div class="row" ng-repeat="transaction in dashCtrl.user.history">
-          <div class="col">
-            <h4>{{transaction.user}}</h4>
-          </div>
-          <div class="col">
-            <h4>£{{transaction.amount.toFixed(2)}}</h4>
-          </div>
-          <div class="col">
-            <h4>{{transaction.date}}</h4>
-          </div>
-        </div>
+      <div class='userInfo'>
+        <h3>{{dashCtrl.user.name}}</h3>
+        <br>
+        <h3>Tipr ID: 1234</h3>
+        <br>
+        <h3>Balance:  <span class='balance'>£{{dashCtrl.user.balance.toFixed(2)}}</span></h3>
       </div>
     </div>
 
+    <div class="transactions">
+      <div class="row" ng-repeat="transaction in dashCtrl.user.history" ng-style=" $odd ? { 'background-color':'#E7E4E4'} : { 'background-color': 'white' }">
+        <div class="col">
+          <img class = 'arrow' src='/img/blue-arrow.png' ng-show="transaction.amount > 0" />
+          <img class = 'arrow' src='/img/red-arrow.png' ng-show="transaction.amount < 0" />
+        </div>
+        <div class="col">
+          <h4>{{transaction.user}}</h4>
+          <h4>{{transaction.date}}</h4>
+        </div>
+        <div class="col">
+          <div>
+            <h4 class='amount' ng-style=" transaction.amount > 0 ? { 'color':'#4083F3'} : { 'color': '#FE4C5B' }">
+              £{{transaction.amount.toFixed(2)}}
+            </h4>
+          </div>
+        </div>
+      </div>
+        <p class='history-link'>View all account activity</p>
+    </div>
+    <a href="#/tip">
+      <button class="button icon-right button-tipr">
+        Send A Tip
+      </button>
+    </a>
   </ion-content>
 </ion-view>

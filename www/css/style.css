@@ -1,91 +1,60 @@
-.scroll {
-  height: 100%;
-  margin: 0;
-  background-color: #384C67;
-}
-
-.profile{
-  text-align: center;
+.profile {
+  background-color: #F9F9F9
 }
 
 .user {
-  padding: 2%;
-  background-image: url("../img/london3.jpg");
-  background-size: 100%;
-}
-
-.user > h1 {
-  color: white;
-}
-
-.balance > h2 {
-  color: white;
+  background-color: white;
+  margin: 5%;
   padding: 1%;
-  margin: 0;
-  background-color: #384C67;
-  border-top: medium;
-  border-style: solid;
-  border-color: #1AAAAB;
-}
-
-.transactions > h3 {
-  color: white;
-  padding: 1%;
-  margin: 0;
+  box-shadow: 10px 10px 10px #E7E4E4, -10px 10px 10px #E7E4E4;
 }
 
 .user > img {
-  border-width: thick;
-  border-style: solid;
-  border-color: #1AAAAB;
   border-radius: 50%;
 }
 
-.transactions {
-  border-color: grey;
-  border-style: solid;
-  border-top: medium;
-  border-bottom: medium;
-  border-style: solid;
-  border-color: #1AAAAB;
-  background-color: #384C67;
-}
-
-.list {
-  padding-top: 15%;
-}
-
-.tipr-color {
-  color: #1AAAAB;
-}
-
-.button-tipr {
-  color: white;
-  background-color: #1AAAAB;
-}
-
-.row {
-  border-top: medium;
-  border-style: solid;
-  border-color: #1AAAAB;
-}
-
-.col > h3 {
-  color: white;
-}
-
-.col > h4 {
-  color: white;
-}
-
-.float-left {
-  width: 50%;
+.userProfilePic {
+  background-color: white;
   float: left;
-  display: inline-block;
 }
 
-.float-right {
-  width: 50%;
-  float:right;
-  display: inline-block;
+.userInfo {
+  margin-top: 1%;
+  text-align: right;
+  background-color: white;
+  float: right;
+}
+
+.balance {
+  color: #4083F3;
+  font-weight: bold;
+  font-size: -webkit-xxx-large;
+}
+
+.transactions {
+  background-color: white;
+  margin: 5%;
+  text-align: center;
+  box-shadow: 10px 10px 10px #E7E4E4, -10px 10px 10px #E7E4E4;
+}
+
+.arrow {
+  margin-top: 10px;
+  height: 50px;;
+  width: 50px;
+}
+
+.amount {
+  font-size: xx-large;
+  margin-top: 20px;
+}
+
+.history-link {
+  text-align: right;
+  color: blue;
+  margin-right: 1%;
+}
+
+.tab-nav {
+  background-color: #FE4C5B;
 }
