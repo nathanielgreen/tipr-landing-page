@@ -1,63 +1,73 @@
-angular.module('tipr.controllers', [])
+angular.module("tipr.controllers", [])
 
-.controller('HistoryController', function($firebaseAuth, $firebaseObject) {
+.controller("HistoryController", function($firebaseAuth, $firebaseObject) {
   var self = this;
 
-  var ref = new Firebase('https://tipr.firebaseio.com/');
-  var usersRef = ref.child('users');
-
-  $firebaseAuth(ref).$onAuth(function(auth) {
-    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
-  });
-})
-
-.controller('DashController', function($firebaseAuth, $firebaseObject) {
-
-  var self = this;
-
-  var ref = new Firebase('https://tipr.firebaseio.com/');
-  var usersRef = ref.child('users');
+  var ref = new Firebase("https://tipr.firebaseio.com/");
+  var usersRef = ref.child("users");
 
   $firebaseAuth(ref).$onAuth(function(auth) {
     self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
   });
 
+  this.convert = function(number) {
+    if(number < 0){ return number.toFixed(2) * -1 };
+    return number.toFixed(2);
+  }
 })
 
-.controller('AccountController', function($firebaseAuth, $firebaseObject, $state) {
+.controller("DashController", function($firebaseAuth, $firebaseObject) {
 
   var self = this;
 
-  var ref = new Firebase('https://tipr.firebaseio.com/');
-  var usersRef = ref.child('users');
+  var ref = new Firebase("https://tipr.firebaseio.com/");
+  var usersRef = ref.child("users");
+
+  $firebaseAuth(ref).$onAuth(function(auth) {
+    self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
+  });
+
+  this.convert = function(number) {
+    if(number < 0){ return number.toFixed(2) * -1 };
+    return number.toFixed(2);
+  }
+
+})
+
+.controller("AccountController", function($firebaseAuth, $firebaseObject, $state) {
+
+  var self = this;
+
+  var ref = new Firebase("https://tipr.firebaseio.com/");
+  var usersRef = ref.child("users");
 
   $firebaseAuth(ref).$onAuth(function(auth) {
     self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
   });
 
   this.updateBalance = function(amount) {
-    var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
-    userRef.child('balance').set(self.user.balance + amount);
-    $state.go('tab.dash')
+    var userRef = new Firebase("https://tipr.firebaseio.com/users/"+self.user.$id);
+    userRef.child("balance").set(self.user.balance + amount);
+    $state.go("tab.dash")
   };
 })
 
-.controller('SignInController', function($state, AuthService){
+.controller("SignInController", function($state, AuthService){
   this.signIn = function(user) {
     AuthService.logIn(user).then(function () {
-      $state.go('tab.dash');
+      $state.go("tab.dash");
     }).catch(function (error) {
       alert(error);
     });
   };
 })
 
-.controller('SignUpController', function($state, AuthService) {
+.controller("SignUpController", function($state, AuthService) {
   this.signUp = function(user) {
     AuthService.signUp(user).then(function () {
       return AuthService.logIn(user);
     }).then(function () {
-      $state.go('tab.dash');
+      $state.go("tab.dash");
     }).catch(function (error) {
       alert(error);
     });
@@ -68,13 +78,13 @@ angular.module('tipr.controllers', [])
   };
 })
 
-.controller('TipController', function($firebaseAuth, $firebaseObject, $state) {
+.controller("TipController", function($firebaseAuth, $firebaseObject, $state) {
 
   var self = this;
 
-  var ref = new Firebase('https://tipr.firebaseio.com/');
-  var usersRef = ref.child('users');
-  self.usersHash = $firebaseObject(ref.child('users'));
+  var ref = new Firebase("https://tipr.firebaseio.com/");
+  var usersRef = ref.child("users");
+  self.usersHash = $firebaseObject(ref.child("users"));
 
   $firebaseAuth(ref).$onAuth(function(auth) {
     self.user = auth ? $firebaseObject(usersRef.child(auth.uid)) : null;
@@ -90,26 +100,26 @@ angular.module('tipr.controllers', [])
     var mm = today.getMonth()+1; //January is 0!
     var yyyy = today.getFullYear();
 
-    if(dd<10) {dd='0'+dd}
-    if(mm<10) {mm='0'+mm}
+    if(dd<10) {dd="0"+dd}
+    if(mm<10) {mm="0"+mm}
 
-    today = mm+'/'+dd+'/'+yyyy;
+    today = mm+"/"+dd+"/"+yyyy;
     return today
   }
 
   self.sendTip = function(amount) {
-    var userRef = new Firebase('https://tipr.firebaseio.com/users/'+self.user.$id);
-    userRef.child('balance').set(self.user.balance - amount);
+    var userRef = new Firebase("https://tipr.firebaseio.com/users/"+self.user.$id);
+    userRef.child("balance").set(self.user.balance - amount);
 
     var recipient = self.usersHash[self.recipientId];
     var recipientRef = new Firebase("https://tipr.firebaseio.com/users/"+self.recipientId);
-    recipientRef.child('balance').set(recipient.balance + amount);
+    recipientRef.child("balance").set(recipient.balance + amount);
 
     var date = new Date();
-    var userTransaction = {"user": recipient.name, "amount": (amount * -1), 'date': self.todaysDate()}
-    var recipientTransaction = {"user": self.user.name, "amount": amount, 'date': self.todaysDate()}
-    userRef.child('history').push(userTransaction);
-    recipientRef.child('history').push(recipientTransaction);
-    $state.go('tab.dash')
+    var userTransaction = {"user": recipient.name, "amount": (amount * -1), "date": self.todaysDate()}
+    var recipientTransaction = {"user": self.user.name, "amount": amount, "date": self.todaysDate()}
+    userRef.child("history").push(userTransaction);
+    recipientRef.child("history").push(recipientTransaction);
+    $state.go("tab.dash")
   }
 })

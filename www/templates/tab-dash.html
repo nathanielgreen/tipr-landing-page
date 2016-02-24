@@ -1,38 +1,39 @@
 <ion-view view-title="tipr">
-  <ion-content class="profile">
+  <ion-content class="body">
+
+    <header><div class='title'></div></header>
     <div class="user">
-      <img ng-src="/img/avatar.png"/>
-      <div class='userInfo'>
-        <h3>{{dashCtrl.user.name}}</h3>
-        <br>
-        <h3>Tipr ID: 1234</h3>
-        <br>
-        <h3>Balance:  <span class='balance'>£{{dashCtrl.user.balance.toFixed(2)}}</span></h3>
+      <div class="profileImage"></div>
+      <div class="userInfo">
+        <h4>{{dashCtrl.user.name}}</h4>
+        <h4>Tipr ID: 1234</h4>
+        <h4>Balance:  <span class="balance">£{{dashCtrl.user.balance.toFixed(2)}}</span></h4>
       </div>
     </div>
 
     <div class="transactions">
       <div class="row" ng-repeat="transaction in dashCtrl.user.history" ng-style="$odd ?{'background-color':'#E7E4E4'}:{'background-color': 'white'}">
         <div class="col">
-          <img class = 'arrow' src='/img/blue-arrow.png' ng-show="transaction.amount > 0" />
-          <img class = 'arrow' src='/img/red-arrow.png' ng-show="transaction.amount < 0" />
+          <div class="arrowBlue" ng-show="transaction.amount > 0"></div>
+          <div class="arrowRed" ng-show="transaction.amount < 0"></div>
         </div>
         <div class="col">
-          <h4>{{transaction.user}}</h4>
-          <h4>{{transaction.date}}</h4>
+          <p>{{transaction.user}}</p>
+          <p>{{transaction.date}}</p>
         </div>
         <div class="col">
-          <h4 class='amount' ng-style="transaction.amount > 0 ? {'color':'#4083F3'}:{'color': '#FE4C5B'}">
-            £{{transaction.amount.toFixed(2)}}
+          <h4 class="amount" ng-style="transaction.amount > 0 ? {'color':'#4083F3'}:{'color': '#FE4C5B'}">
+            £{{dashCtrl.convert(transaction.amount)}}
           </h4>
         </div>
       </div>
-        <a href="#/tab/history"><p class='history-link'>View all account activity</p></a>
+        <a href="#/tab/history"><p class="history-link">View all account activity</p></a>
     </div>
     <a href="#/tip">
       <button class="button icon-right button-tipr">
         Send A Tip
       </button>
     </a>
+    
   </ion-content>
 </ion-view>
