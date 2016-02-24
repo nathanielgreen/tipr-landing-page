@@ -1,5 +1,9 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .body {
-  background-color: #F9F9F9
+  background-color: #F9F9F9;
 }
 
 header {
