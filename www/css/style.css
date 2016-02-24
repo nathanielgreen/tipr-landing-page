@@ -2,6 +2,22 @@
   background-color: #F9F9F9
 }
 
+.ion-tipr-tip:before{
+  content: url('../img/tipr-tip.png') !important;
+}
+
+.ion-tipr-support:before{
+  content: url('../img/tipr-support.png') !important;
+}
+
+.ion-tipr-settings:before{
+  content: url('../img/tipr-settings.png') !important;
+}
+
+.tabs{
+  padding-top: 3px;
+}
+
 .user {
   background-color: white;
   margin: 5%;
@@ -18,10 +34,6 @@
 .userProfilePic {
   background-color: white;
   float: left;
-}
-
-.ion-my-icon-name:before {
-  content: url('../img/tip-symbol.png') !important; 
 }
 
 .userInfo {
