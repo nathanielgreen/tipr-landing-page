@@ -55,7 +55,7 @@ angular.module("tipr.controllers", [])
 .controller("SignInController", function($state, AuthService){
   this.signIn = function(user) {
     AuthService.logIn(user).then(function () {
-      $state.go("tab.dash");
+      $state.go("dash");
     }).catch(function (error) {
       alert(error);
     });
@@ -67,7 +67,7 @@ angular.module("tipr.controllers", [])
     AuthService.signUp(user).then(function () {
       return AuthService.logIn(user);
     }).then(function () {
-      $state.go("tab.dash");
+      $state.go("dash");
     }).catch(function (error) {
       alert(error);
     });

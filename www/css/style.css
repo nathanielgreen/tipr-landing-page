@@ -12,6 +12,18 @@ header {
   background-color: #FE4C5B;
 }
 
+.bar.bar-footer {
+  height:49px;
+  width:100%;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #FE4C5B;
+}
+
+ion-footer-bar h2 {
+  color: #FFD743;
+}
+
 .title {
   height: 100%;
   width: 100px;
@@ -42,15 +54,15 @@ header {
   padding-top: 3px;
 }
 
-.ion-tipr-tip:before{
+.ion-tipr-tip:before {
   content: url("../img/tipr-tip.png") !important;
 }
 
-.ion-tipr-support:before{
+.ion-tipr-support:before {
   content: url("../img/tipr-support.png") !important;
 }
 
-.ion-tipr-settings:before{
+.ion-tipr-settings:before {
   content: url("../img/tipr-settings.png") !important;
 }
 
@@ -58,7 +70,7 @@ header {
   overflow: auto;
   background-color: white;
   width: 100%;
-  margin-bottom: 1%;
+  margin-bottom: 4%;
   padding: 1%;
   box-shadow: 10px 10px 10px #E7E4E4, -10px 10px 10px #E7E4E4;
 }
@@ -76,6 +88,7 @@ header {
 
 .userInfo {
   margin-top: 1%;
+  margin-right: 1%;
   text-align: right;
   background-color: white;
   float: right;
@@ -91,6 +104,7 @@ header {
   background-color: white;
   margin: 5%;
   margin-top: 1%;
+  margin-bottom: 1%;
   text-align: center;
   box-shadow: 10px 10px 10px #E7E4E4, -10px 10px 10px #E7E4E4;
 }
@@ -102,7 +116,7 @@ header {
   box-shadow: 10px 10px 10px #E7E4E4, -10px 10px 10px #E7E4E4;
 }
 
-.arrowBlue{
+.arrowBlue {
   margin: auto;
   margin-top: 10px;
   height: 40px;
@@ -111,7 +125,7 @@ header {
   background-image: url("../img/blue-arrow.png")
 }
 
-.arrowRed{
+.arrowRed {
   margin: auto;
   margin-top: 10px;
   height: 40px;

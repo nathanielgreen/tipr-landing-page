@@ -21,40 +21,22 @@ angular.module('tipr', ['ionic', 'firebase', 'tipr.controllers', 'tipr.services'
 
   $stateProvider
 
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
-
-  .state('tab.history', {
+  .state('history', {
     url: '/history',
-    views: {
-      'tab-history': {
-        templateUrl: 'templates/tab-history.html',
-        controller: 'HistoryController as historyCtrl'
-      }
-    }
+    templateUrl: 'templates/history.html',
+    controller: 'HistoryController as historyCtrl'
   })
 
-  .state('tab.dash', {
+  .state('dash', {
       url: '/dash',
-      views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashController as dashCtrl'
-        }
-      }
+      templateUrl: 'templates/dash.html',
+      controller: 'DashController as dashCtrl'
     })
 
-  .state('tab.account', {
+  .state('account', {
     url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountController as accountCtrl'
-      }
-    }
+    templateUrl: 'templates/account.html',
+    controller: 'AccountController as accountCtrl'
   })
 
   .state('signin', {
