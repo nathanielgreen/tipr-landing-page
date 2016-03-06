@@ -2,40 +2,105 @@
   "tipees":
     [
       {
-        "name":"Nat", 
-        "occupation":"Pizza Express",
-        "coords": [51.564643, -0.105872],
-        "photo":"http://imgur.com/mCvaM2y.jpg"
+
+        "name":"Mike",
+        "occupation":"Subway",
+        "coords": [51.517975, -0.074246],
+        "photo":"public/images/waiter1.jpg",
+        "pin": "public/images/waiter1.png"
       },
       {
-        "name":"Nat's Stalker", 
-        "occupation":"Express Pizza",
-        "coords": [51.565743, -0.106972],
-        "photo":"http://imgur.com/mCvaM2y.jpg"
+
+        "name":"Dan",
+        "occupation":"Blessings",
+        "coords": [51.518459, -0.074158],
+        "photo":"public/images/waiter2.jpg",
+        "pin": "public/images/waiter2.png"
       },
       {
-        "name":"Aaron", 
-        "occupation":"Nandos",
-        "coords": [51.87629, 0.156754],
-        "photo":"http://imgur.com/NHDonCA.jpg"
-      },
-      {
-        "name":"Aaron's Mum", 
-        "occupation":"Dosnan",
-        "coords": [51.87729, 0.156854],
-        "photo":"http://imgur.com/NHDonCA.jpg"
+        "name":"Jake",
+        "occupation":"Mama Thai",
+        "coords": [51.51811, -0.074622],
+        "photo":"public/images/waiter3.jpg",
+        "pin": "public/images/waiter3.png"
       },
       {
         "name":"Chris",
-        "occupation":"McD's",
-        "coords": [51.444978, -0.137747],
-        "photo":"http://imgur.com/VFjokYS.jpg"
+        "occupation":"Kasbah",
+        "coords": [51.517796, -0.074093],
+        "photo":"public/images/waiter4.jpg",
+        "pin": "public/images/waiter4.png"
       },
       {
-        "name":"Chris' Stalker",
-        "occupation":"DMc's",
-        "coords": [51.446078, -0.138847],
-        "photo":"http://imgur.com/VFjokYS.jpg"
+        "name":"Sam",
+        "occupation":"Lupita",
+        "coords": [51.517833, -0.073699],
+        "photo":"public/images/waiter5.jpg",
+        "pin": "public/images/waiter5.png"
+      },
+      {
+        "name":"Nat",
+        "occupation":"Chop'd",
+        "coords": [51.519319, -0.074898],
+        "photo":"public/images/waiter6.jpg",
+        "pin": "public/images/waiter6.png"
+      },
+      {
+        "name":"Nikki",
+        "occupation":"Poppy's Fish & Chips",
+        "coords": [51.520093, -0.074909],
+        "photo":"public/images/waiter7.jpg",
+        "pin": "public/images/waiter7.png"
+      },
+      {
+        "name":"Izzy",
+        "occupation":"Pattisserie Valeri",
+        "coords": [51.519185, -0.077301],
+        "photo":"public/images/waiter8.jpg",
+        "pin": "public/images/waiter8.png"
+      },
+      {
+        "name":"Fran",
+        "occupation":"Ottolenghi Spitalfields",
+        "coords": [51.518247, -0.077055],
+        "photo":"public/images/waiter9.jpg",
+        "pin": "public/images/waiter9.png"
+      },
+      {
+        "name":"Alex",
+        "occupation":"The English",
+        "coords": [51.518935, -0.076443],
+        "photo":"public/images/waiter10.jpg",
+        "pin": "public/images/waiter10.png"
+      },
+      {
+        "name":"Allie",
+        "occupation":"Ghandi's",
+        "coords": [51.519349, -0.072213],
+        "photo":"public/images/waiter11.jpg",
+        "pin": "public/images/waiter11.png"
+      },
+      {
+        "name":"Jojo",
+        "occupation":"Sainsburys",
+        "coords": [51.517706, -0.076185],
+        "photo":"public/images/waiter12.jpg",
+        "pin": "public/images/waiter12.png"
+      },
+      {
+        "name":"Marcii",
+        "occupation":"Happy Days",
+        "coords": [51.516808, -0.074313],
+        "photo":"public/images/waiter13.jpg",
+        "pin": "public/images/waiter13.png"
+      },
+      {
+        "name":"Jackie",
+        "occupation":"Happy Days",
+        "coords": [51.516224, -0.074764],
+        "photo":"public/images/waiter14.jpg",
+        "pin":"public/images/waiter14.png"
       }
+
     ]
 }

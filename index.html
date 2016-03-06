@@ -5,8 +5,18 @@
 
   <title>Tipr | The New Way To Tip</title>
 
+  <meta name='viewport' content='initial-scale=1,
+  maximum-scale=1,user-scalable=no' />
+
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
+
+  <!-- MapBox -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.3/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.3/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css'
+  rel='stylesheet' />
 
   <!-- Google Fonts -->
   <link rel="stylesheet"
@@ -21,19 +31,22 @@
   <!-- jQuery -->
   <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
 
-    <div id="buttons">
-      <button id='findme'>FIND ME</button>
-      <button id='discover'>DISCOVER</button>
+    <div id="buttons-div">
+      <button id="discover">DISCOVER</button>
+      <button id="findme">FIND ME</button>
     </div>
-  
+
     <div id='map'>
     </div>
-    
+
 
   </div>
 

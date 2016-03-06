@@ -1,12 +1,13 @@
 html{
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: Arial;
-  margin: 0 auto;
-  text-align: center;
   height: 100%;
+  margin: 0;
+  width: 100%;
 }
 
 a {
@@ -16,16 +17,20 @@ a {
 
 
 #map {
-  height: 90%;
+  height: 95%;
   width: 100%;
 }
 
-#buttons {
-  height: 10%;
+#buttons-div {
+  height: 5%;
+  text-align: center;
+  width: 100%; 
 }
+
 
 .wrapper {
   height: 100%;
+  width: 100%;
 }
 /* Marker CSS */
 .markerPopup {
@@ -80,6 +85,11 @@ a {
     }
 
       .markerLink {
+        border: solid;
+        border-radius: 1px;
+        border-width: 5px;
+        border-color: #2d2d2d;
+        background: #ddd;
         margin-top: 30px;
         font-size: 16px;
         padding-top: 10px;
@@ -87,6 +97,6 @@ a {
         text-align: center;
         width: 90%;
       }
-
+/* Marker CSS End */
 
 
