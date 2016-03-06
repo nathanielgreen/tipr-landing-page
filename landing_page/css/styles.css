@@ -1204,6 +1204,28 @@ label {
 	color: #aaa;
 }
 
+#submit {
+	box-shadow: none;
+}
+
+input.submit-contact {
+	text-align: center;
+	border: 3px solid #f44336;
+	margin: 15px 5px 0 15px;
+	border-radius: 4px;
+	display: inline-block;
+	font-family: "Raleway", sans-serif;
+	border-radius: 9999px;
+	font-size: 19px;
+	padding: 10px 35px;
+	width: auto;
+	background-color: transparent;
+}
+ input.submit-contact:hover {
+	color: #fff;
+ 	background-color: #f44336;
+ }
+
 input.submit {
 	cursor: pointer;
 	display: inline-block;

@@ -342,7 +342,7 @@
 											<div class="flat-section-title">
 												<h2>Business customers</h2>
 												<span class="flat-section-subtitle">
-													Own or run a business in the service industry? <a href="#contact">Get in contact</a> to see how Tipr can work for you.
+													Own or run a business in the service industry? <a href="#contact" data-toggle="modal" data-target="#contact">Get in contact</a> to see how Tipr can work for you.
 												<!-- end flat-section-subtitle -->
 												</span>
 											<!-- end flat-section-title -->
@@ -374,7 +374,7 @@
 														<div class="info-box-content">
 															<h4>Bespoke Modules</h4>
 															<p>
-																The Tipr team can create bespoke modules to integrate seamlessly with your business. Just <a href="#contact">get in contact</a> with your specific needs.
+																The Tipr team can create bespoke modules to integrate seamlessly with your business. Just <a href="#contact" data-toggle="modal" data-target="#contact">get in contact</a> with your specific needs.
 															</p>
 														<!-- end info-box-content -->
 														</div>
@@ -538,6 +538,67 @@
 	<!-- end full-container -->
 	</div>
 
+
+<!-- Contact Modal -->
+<div id="contact" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Contact the Tipr team!</h4>
+      </div>
+      <div class="modal-body">
+				<form class="form-horizontal" role="form" method="post" action="php/contact.php">
+				    <div class="form-group">
+				        <label for="name" class="col-sm-2 control-label">Name</label>
+				        <div class="col-sm-10">
+				            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+				            <?php echo "<p class='text-danger'>$errName</p>";?>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label for="email" class="col-sm-2 control-label">Email</label>
+				        <div class="col-sm-10">
+				            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+				            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label for="message" class="col-sm-2 control-label">Message</label>
+				        <div class="col-sm-10">
+				            <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+				            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+				        <div class="col-sm-10">
+				            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+				            <?php echo "<p class='text-danger'>$errHuman</p>";?>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <div class="col-sm-10 col-sm-offset-2">
+				            <input id="submit" name="submit" type="submit" value="Send" class="submit-contact go-to-subscribe button transparent-colorful hover-colorful rounded small">
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <div class="col-sm-10 col-sm-offset-2">
+				            <?php echo $result; ?>
+				        </div>
+				    </div>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="go-to-subscribe button transparent-colorful hover-colorful rounded small" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 	<div id="website-loading">
 		<div class="loading-effect">
 			<div class="la-ball-fall">
@@ -553,6 +614,7 @@
 
 	<!-- JAVASCRIPT -->
 	<script src="js/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/jquery.malihu.PageScroll2id.min.js"></script>
 	<script src="js/jquery.mb.YTPlayer.min.js"></script>
