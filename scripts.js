@@ -115,6 +115,6 @@ $( "#findme" ).click(function() {
 
 $( "#discover" ).click(function() {
   findTipees(9999999999999999999999);
-  map.setView([51.518935, -0.076443], 18); 
+  map.setView([51.518935, -0.076443], 20); 
 });
 // Map Function + jQuery End
