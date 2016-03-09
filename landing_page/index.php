@@ -79,7 +79,7 @@
 															<div class="divider-space-with-line" id="header-divider" data-divider-space-with-line="30px"></div><!-- end divider-space-with-line -->
 														<!-- end divider-space-container -->
 														</div>
-													<h4 id="header-h4" class="light-heading subheader">Sign up for beta access to the Tipr platform! Exclusive access to offers and giveaways before we go fully live.</h4>
+													<h4 id="header-h4" class="light-heading subheader">Sign up for early access to the Tipr platform! Including exclusive offers and giveaways.</h4>
 													<form class="subscribe-form" action="#" id="header-signup">
 														<input type="email" placeholder="Your Email" id="header-signup-radius" required>
 														<input type="submit" value="Sign up!" class="submit" id="submit-button">
@@ -117,7 +117,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
-								<a href="#about-us">
+								<a href="#features">
 									Scroll Down
 									<span class="mouse"></span>
 								</a>
@@ -256,9 +256,9 @@
 													<!-- end info-box-icon -->
 													</span>
 													<div class="info-box-content">
-														<h4>Lowest Fees</h4>
+														<h4>Great Support</h4>
 														<p>
-															Payments charged at just 1.4% + £0.20. That's half the price of the leading payment provider for small payments!
+															Got a payment dispute or just need some help? Tipr provides 24/7 support for all its customers.
 														</p>
 													<!-- end info-box-content -->
 													</div>
@@ -307,9 +307,9 @@
 													<!-- end info-box-icon -->
 													</span>
 													<div class="info-box-content">
-														<h4>Great Support</h4>
+														<h4>Lowest Fees</h4>
 														<p>
-															Got a payment dispute or just need some help? Tipr provides 24/7 support for all its customers.
+															Payments charged at just 1.4% + £0.20. That's half the price of the leading payment provider for small payments!
 														</p>
 													<!-- end info-box-content -->
 													</div>
