@@ -4,7 +4,7 @@ html{
 }
 
 body {
-  font-family: Arial;
+  font-family: 'Montserrat', sans-serif;
   height: 100%;
   margin: 0;
   width: 100%;
@@ -33,71 +33,67 @@ a {
   width: 100%;
 }
 /* Marker CSS */
-.markerPopup {
-  font-family: Arial;
-  height: 150px;
-  width: 300px;
+.leaflet-popup-content-wrapper {
+  background: #FAEBD7;
+  border: solid;
+  border-color: #e1d3c1;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 0px;
 }
 
-  .markerTopContent {
-    float: top;
-    height: 30px;
-    overflow: hidden;
+.leaflet-popup-tip {
+  background: #FAEBD7;
+}
+
+.leaflet-popup-content {
+  background: #FAEBD7;
+  border-radius: 5px;
+  padding: 0px;
+  padding-bottom: 25px;
+}
+
+.markerPopup {
+  color: #f44336;
+  font-family: inherit;
+  font-size: 14px;
+  height: 150px;
+  text-align: center;
+  margin-bottom: 25px;
+  width: 150px;
+}
+
+  .markerPhoto {
+    border: solid;
+    border-color: #e1d3c1;
+    border-radius: 180px;
+    border-width: 2px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    height: 75%;
+    width: 75%;
   }
-    .markerName {
-      background: #2d2d2d;
+
+
+  .markerLink {
+    background: #FAEBD7;
+    border: solid;
+    border-radius: 40px;
+    border-width: 2px;
+    border-color: #f44336;
+    color: inherit;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+    .markerLink:hover {
+      background: #f44336;
       color: #ddd;
-      height: 100%;
-      padding-top: 5px;
-      text-align: center;
-      width: 100%;
     }
-
-  .markerBottomContent {
-    float: bottom;
-    margin-top: 10px;
-    height: 110px;
-  }
-    .markerLeftContent {
-      float: left;
-      margin: 0 auto;
-      height: 100%;
-      text-align: center;
-      width: 40%;
-    }
-
-      .markerPhoto {
-        background: #FC1004;
-        border: solid;
-        border-color: #2d2d2d;
-        border-radius: 180px;
-        border-width: 2px;
-        float: left;
-        height: 100%;
-        width: 100%;
-      }
-
-    .markerRightContent {
-      display: inline-block;
-      float: right;
-      height: 100%;
-      text-align: center;
-      width: 60%;
-    }
-
-      .markerLink {
-        border: solid;
-        border-radius: 40px;
-        border-width: 5px;
-        border-color: #2d2d2d;
-        background: #ddd;
-        margin-top: 30px;
-        font-size: 16px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-        width: 90%;
-      }
 /* Marker CSS End */
 
 

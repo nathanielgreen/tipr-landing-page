@@ -69,18 +69,12 @@ function findTipees(chosenRadius) {
           var markers = L.marker([data.tipees[i].coords[0], data.tipees[i].coords[1]], {icon: waiterIcon})
           markers.addTo(map).bindPopup(
             "<div class='markerPopup'>" 
-            + "<div class='markerTopContent'>"
-                  + "<div class='markerName'>"
-                  + data.tipees[i].name + " from " + data.tipees[i].occupation
-                  + "</div>"
+              + "<div>"
+                + "<img class='markerPhoto' src='" + data.tipees[i].photo + "'>"
+                + data.tipees[i].name + " Smith" 
               + "</div>"
-              + "<div class='markerBottomContent'>"
-                  + "<div class='markerLeftContent'>"
-                    + "<img class='markerPhoto' src='" + data.tipees[i].photo + "'>"
-                  + "</div>"
-                  + "<div class='markerRightContent'>"
-                    + "<button href='#' class='markerLink'>TIP</button>"
-                  + "</div>"
+              + "<div>"
+                + "<button href='#' class='markerLink'>Send a Tip</button>"
               + "</div>"
             + "</div>"
           ); // End of Marker Placement

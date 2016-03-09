@@ -88,6 +88,13 @@
         "pin": "public/images/waiter12.png"
       },
       {
+        "name":"Jojo",
+        "occupation":"Sainsburys",
+        "coords": [51.516500, -0.07600],
+        "photo":"public/images/waiter1.jpg",
+        "pin": "public/images/waiter1.png"
+      },
+      {
         "name":"Marcii",
         "occupation":"Happy Days",
         "coords": [51.516808, -0.074313],
